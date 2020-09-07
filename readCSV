@@ -7,10 +7,15 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report
 import sklearn.metrics
 
+#Read data from CSV file
 train = pd.read_csv(r"C:\Users\jaykhan\Desktop\Data Science\customer_propensity_score.csv")
 
-#understand data types in train dataframe
+#Understand data types in train dataframe
 train.dtypes
+print(train.describe())
+print(train.info())
+train.head()
+
 
 import seaborn as sns
 corr = train.corr()
